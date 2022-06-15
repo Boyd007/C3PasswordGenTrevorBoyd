@@ -1,5 +1,21 @@
 // Assignment code here
-
+function generatePassword() {
+  var passwordLength = prompt("How long should your password be?")
+  var lowercaseRequest = confirm("Do you need lower case letters?")
+  var uppercaseRequest = confirm("Do you need upper case letters?")
+  var numericRequest = confirm("Do you need to add numbers?")
+  var specialcharRequest = confirm("Do you need special characters?")
+  var alphabet = "abcdefghijklmnopqrstuvwxyz"
+  var alphabetUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  var numbers = "0123456789"
+  var specialcharacters = "!@#$%^&*"
+  var passwordPool = ""
+if (lowercaseRequest) {
+  passwordPool+=alphabet
+}
+  
+  return "swdkjhewrjkherw9fd"
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
