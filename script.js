@@ -1,14 +1,14 @@
 // Assignment code here
 function generatePassword() {
-  var passwordLength = prompt("How long should your password be?")
+  var passwordLength = prompt("How many characters should your password be?")
   var lowercaseRequest = confirm("Press OK if you require lower case letters")
   var uppercaseRequest = confirm("Press OK if you require upper case letters")
   var numericRequest = confirm("Press Ok if you wish to add numbers")
-  var specialcharRequest = confirm("Press ok if you require any special characters")
+  var specialcharRequest = confirm("Press OK if you require any special characters")
   var alphabet = "abcdefghijklmnopqrstuvwxyz"
   var alphabetUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   var numbers = "0123456789"
-  var specialcharacters = "!@#$%^&*"
+  var specialcharacters = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
   var passwordPool = ""
 if (lowercaseRequest) {
   passwordPool+=alphabet
