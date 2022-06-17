@@ -1,5 +1,6 @@
 // Assignment code here
 function generatePassword() {
+  debugger
   var passwordLength = prompt("How many characters should your password be?")
   var lowercaseRequest = confirm("Press OK if you require lower case letters")
   var uppercaseRequest = confirm("Press OK if you require upper case letters")
@@ -13,7 +14,24 @@ function generatePassword() {
 if (lowercaseRequest) {
   passwordPool+=alphabet
 }
-  
+if (uppercaseRequest) {
+  passwordPool+=alphabetUpper
+} 
+if (numericRequest) {
+  passwordPool+=numericRequest
+}
+if (specialcharRequest) {
+  passwordPool+=specialcharRequest
+}
+for(var i=0;i<passwordLength; i++){
+var decimal=Math.random()
+var num=decimal*passwordPool.length
+var rounded=Math.ceil(num)
+var char=passwordPool.charAt(rounded)
+}
+
+
+
   return "swdkjhewrjkherw9fd"
 }
 
