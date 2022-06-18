@@ -25,7 +25,8 @@ if (specialcharRequest) {
 }
 for (var i = 0; i <= numOfChar; i++) {
   passwordArray.push(characterArray[Math.floor(Math.random() * characterArray.length)]);
-  newPassword = passwordString.push(passwordPool[randomChar]) console.log(newPassword)
+  newPassword = passwordString.push(passwordPool[randomChar]) 
+  console.log(newPassword)
 }
 
 }
