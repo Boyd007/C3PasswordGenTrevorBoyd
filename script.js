@@ -35,10 +35,10 @@ var char=passwordPool.charAt(rounded)
   return "swdkjhewrjkherw9fd"
 }
 
-// Get references to the #generate element
+// Connecting Button to JS
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+// Write password to the #password input HTML
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
