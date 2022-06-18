@@ -12,16 +12,16 @@ function generatePassword() {
   var specialcharacters = ['!','#','$','%','&','*','+',',','-','.','/',':',';','<=>','?','@','[\]','^','_',]
   var passwordPool = [];
 if (lowercaseRequest) {
-  passwordPool+=alphabet
+  passwordPool=passwordPool.concat(alphabet)
 }
 if (uppercaseRequest) {
-  passwordPool+=alphabetUpper
+  passwordPool=passwordPool.concat(alphabetUpper)
 } 
 if (numericRequest) {
-  passwordPool+=numericRequest
+  passwordPool=passwordPool.concat(numericRequest)
 }
 if (specialcharRequest) {
-  passwordPool+=specialcharRequest
+  passwordPool=passwordPool.concat(specialcharRequest)
 }
 for (var i = 0; i <= numOfChar; i++) {
   var randomChar = Math.floor(Math.random() * passwordString.length);
