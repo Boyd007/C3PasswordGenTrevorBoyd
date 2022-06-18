@@ -23,16 +23,12 @@ if (numericRequest) {
 if (specialcharRequest) {
   passwordPool+=specialcharRequest
 }
-for(var i=0;i<passwordLength; i++){
-var decimal=Math.random()
-var num=decimal*passwordPool.length
-var rounded=Math.ceil(num)
-var char=passwordPool.charAt(rounded)
+for (var i = 0; i <= numOfChar; i++) {
+  var randomChar = Math.floor(Math.random() * passwordString.length);
+  newPassword += passwordString.charAt(randomChar);
+  console.log(newPassword)
 }
 
-
-
-  return "swdkjhewrjkherw9fd"
 }
 
 // Connecting Button to JS
