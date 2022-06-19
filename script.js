@@ -9,8 +9,9 @@ function generatePassword() {
   var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
   var alphabetUpper = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
   var numbers = ['0','1','2','3','4','5','6','7','8','9']
-  var specialcharacters = ['!','#','$','%','&','*','+',',','-','.','/',':',';','<=>','?','@','[\]','^','_',]
+  var specialcharacters = ['!','#','$','%','&','*','+',',','-','.','/',':',';','?','@',',']
   var passwordPool = [];
+  var passwordArray = [];
 if (lowercaseRequest) {
   passwordPool=passwordPool.concat(alphabet)
 }
@@ -18,18 +19,21 @@ if (uppercaseRequest) {
   passwordPool=passwordPool.concat(alphabetUpper)
 } 
 if (numericRequest) {
-  passwordPool=passwordPool.concat(numericRequest)
+  passwordPool=passwordPool.concat(numbers)
 }
 if (specialcharRequest) {
-  passwordPool=passwordPool.concat(specialcharRequest)
+  passwordPool=passwordPool.concat(specialcharacters)
 }
-for (var i = 0; i <= numOfChar; i++) {
-  passwordArray.push(characterArray[Math.floor(Math.random() * characterArray.length)]);
-  newPassword = passwordString.push(passwordPool[randomChar]) 
-  console.log(newPassword)
+for (var i = 0; i <= passwordlength; i++) {
+  var characterIndex = Math.floor(Math.random() * passwordPool.length)
+  var chosenCharacter = passwordPool[characterIndex]
+  passwordArray.push(chosenCharacter);
 }
 
+  console.log(passwordArray.join(''))
+
 }
+
 
 // Connecting Button to JS
 var generateBtn = document.querySelector("#generate");
