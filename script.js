@@ -2,7 +2,6 @@
 var passwordArray = [];
 
 function generatePassword() {
-  debugger
   var passwordLength = prompt("How many characters should your password be?")
   var lowercaseRequest = confirm("Press OK if you require lower case letters")
   var uppercaseRequest = confirm("Press OK if you require upper case letters")
@@ -13,7 +12,6 @@ function generatePassword() {
   var numbers = ['0','1','2','3','4','5','6','7','8','9']
   var specialcharacters = ['!','#','$','%','&','*','+',',','-','.','/',':',';','?','@',',']
   var passwordPool = [];
-  var passwordArray = [];
 if (lowercaseRequest) {
   passwordPool=passwordPool.concat(alphabet)
 }
