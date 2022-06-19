@@ -24,7 +24,7 @@ if (numericRequest) {
 if (specialcharRequest) {
   passwordPool=passwordPool.concat(specialcharacters)
 }
-for (var i = 0; i <= passwordlength; i++) {
+for (var i = 0; i <= passwordLength; i++) {
   var characterIndex = Math.floor(Math.random() * passwordPool.length)
   var chosenCharacter = passwordPool[characterIndex]
   passwordArray.push(chosenCharacter);
@@ -40,6 +40,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input HTML
 function writePassword() {
+  generatePassword();
   var passwordText = document.querySelector("#password");
 
      passwordText.value = passwordArray.join('')
