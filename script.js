@@ -1,4 +1,6 @@
 // Assignment code here
+var passwordArray = [];
+
 function generatePassword() {
   debugger
   var passwordLength = prompt("How many characters should your password be?")
@@ -40,10 +42,9 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input HTML
 function writePassword() {
-  var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+     passwordText.value = passwordArray.join('')
 
 }
 
